@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac34ad47-8b31-41df-b75f-7f6b62a6dd53">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `nama`, `nidn`, `isbn`, `judul`, `tahun`, `hal`, `eks`, `nominal` FROM `tb_penulis`]]>
+	</queryString>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nidn" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isbn" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="judul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="eks" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nominal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="tahun">
+		<groupExpression><![CDATA[$F{tahun}]]></groupExpression>
+		<groupHeader>
+			<band height="108">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#006600" uuid="835d1a16-8fff-443b-92f1-61e7d440896c"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tahun}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="4e287bb5-ac39-4ea4-8fff-2cf4fd5c81d1"/>
+				</rectangle>
+				<staticText>
+					<reportElement style="Column header" x="0" y="37" width="47" height="15" uuid="d012fe69-f393-434f-bfc2-97fedb825562"/>
+					<text><![CDATA[nidn]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="52" width="47" height="15" uuid="6d92117a-90f1-45db-9d1f-28be15414264"/>
+					<text><![CDATA[nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="67" width="47" height="15" uuid="7fe6cf6d-9dec-4199-9fbb-7fc1c54261e9"/>
+					<text><![CDATA[isbn]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="82" width="47" height="15" uuid="b737979d-ab53-48be-adae-5c83f36b695d"/>
+					<text><![CDATA[judul]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Detail" x="47" y="37" width="227" height="15" uuid="088e2364-b556-45bd-8d7b-e539f435d627"/>
+					<textFieldExpression><![CDATA[$F{nidn}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="47" y="52" width="283" height="15" uuid="990ebc5c-2e9c-4162-b30d-b9bcf1b94792"/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="47" y="67" width="216" height="15" uuid="1e6eeab7-a1ea-48d3-abc2-07bb6e8029e4"/>
+					<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="47" y="82" width="506" height="15" uuid="7bc0537c-81c2-42ab-8585-5501c93cd760"/>
+					<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="311" y="67" width="79" height="15" uuid="66b32815-bbe6-48ef-bb6c-1cfdd6e042fb"/>
+					<textFieldExpression><![CDATA[$F{hal}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="390" y="67" width="79" height="15" uuid="ef9abd49-efc6-4a94-9ce7-47761d77d8a7"/>
+					<textFieldExpression><![CDATA[$F{eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="469" y="67" width="79" height="15" uuid="8bec2ee5-4fc4-466d-abf1-ada7efde8703"/>
+					<textFieldExpression><![CDATA[$F{nominal}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="ab8f4f77-6605-42ff-92d8-315ab1f1e880"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[UNISKA PRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="100" y="46" width="174" height="22" uuid="3951ceb0-2199-4908-b00e-418268b23d23"/>
+				<text><![CDATA[Data Penulis Buku]]></text>
+			</staticText>
+			<image>
+				<reportElement x="311" y="4" width="242" height="42" uuid="90a2b4e8-9c33-436f-96ec-c9b0d33b2496"/>
+				<imageExpression><![CDATA["D:\\UASS\\UniskaPressJava_M.BAHRIL ILMI_18630762_NEW\\src\\report\\leaf_banner_green.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="34d486e7-696e-4abb-96ce-de7f4401e0f4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="5b916e13-a532-467f-ac10-64d9c2e74136"/>
+				<text><![CDATA[hal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="bf93288a-07da-48cf-a20d-e03f842172c0"/>
+				<text><![CDATA[eks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="0da4b4cb-600a-45a4-ae51-7eaa1bc512a8"/>
+				<text><![CDATA[nominal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="5583b5dd-829b-45a3-9ee5-4765f2c541a6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="fb0ff717-94af-4bbc-b254-6840ebd59cb1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="bd751ab1-c843-492b-bead-33bf73de71a7"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="58a631ec-4dc9-4445-acaf-15720cb0e702"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="357e81bb-eb8e-415d-9646-2a43d6fc25ab"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

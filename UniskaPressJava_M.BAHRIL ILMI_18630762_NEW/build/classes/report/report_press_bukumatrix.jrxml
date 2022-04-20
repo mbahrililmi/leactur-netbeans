@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="644d7b18-3e94-43f3-b667-ac53a1538e89">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `hal/eks`, `50eks`, `100eks`, `150eks`, `200eks`, `250eks`, `300eks` FROM `buku_matrix`]]>
+	</queryString>
+	<field name="hal/eks" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="50eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="100eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="150eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="200eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="250eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="300eks" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="hal/eks">
+		<groupExpression><![CDATA[$F{hal/eks}]]></groupExpression>
+		<groupHeader>
+			<band height="123">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#990099" uuid="99421cde-6e86-4e35-9a7e-603acaae33a0"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hal/eks}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="7abec5f3-6b8c-4520-8524-ac1dde7f51fa"/>
+				</rectangle>
+				<staticText>
+					<reportElement style="Column header" x="0" y="37" width="92" height="15" uuid="46b43028-e3dc-4702-a845-2cef3bb188c2"/>
+					<text><![CDATA[50eks]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="67" width="92" height="15" uuid="c6c87241-802c-4145-8c57-26f31e9a3e85"/>
+					<text><![CDATA[100eks]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="95" width="92" height="15" uuid="6cb72d5a-4035-4178-9358-c4e0a030fd8b"/>
+					<text><![CDATA[150eks]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Detail" x="92" y="37" width="221" height="15" uuid="cf4331b9-3ec4-4aca-80f7-b07e374e90be"/>
+					<textFieldExpression><![CDATA[$F{50eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="92" y="67" width="221" height="15" uuid="309cb9b0-4ae3-44b7-8e69-b82e40ea7fa0"/>
+					<textFieldExpression><![CDATA[$F{100eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="92" y="95" width="221" height="15" uuid="482e385b-cf3b-4818-bd94-365436eb0772"/>
+					<textFieldExpression><![CDATA[$F{150eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="421" y="67" width="92" height="15" uuid="469ee67c-7005-4533-bac9-91f911c08fd4"/>
+					<textFieldExpression><![CDATA[$F{200eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="569" y="67" width="92" height="15" uuid="e40bec90-5836-4b0d-8468-bec39e1d4e1b"/>
+					<textFieldExpression><![CDATA[$F{250eks}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="695" y="67" width="92" height="15" uuid="9bed205d-2687-4e6a-93ba-212548daa4c8"/>
+					<textFieldExpression><![CDATA[$F{300eks}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="75fd32bd-722e-4b70-80ec-9b4b80e1df23"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[UNISKA PRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="313" y="67" width="200" height="22" uuid="af08735c-aaac-4703-b995-e21947769ac0"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Data Buku Matrix]]></text>
+			</staticText>
+			<image>
+				<reportElement x="552" y="13" width="235" height="54" uuid="dc7d5a97-3f63-4f78-ad6c-2bbbecdf1c79"/>
+				<imageExpression><![CDATA["D:\\UASS\\UniskaPressJava_M.BAHRIL ILMI_18630762_NEW\\src\\report\\leaf_banner_violet.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="d015a87d-7a19-4310-ac94-3416e0a58291"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="421" y="21" width="92" height="15" uuid="4519afb7-ba47-4e8f-8498-968f93f71c22"/>
+				<text><![CDATA[200eks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="569" y="20" width="92" height="15" uuid="13e78ff1-f523-4f7c-909b-edbe5a966c96"/>
+				<text><![CDATA[250eks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="695" y="20" width="92" height="15" uuid="69bcf51c-1d93-4a16-a11e-ed130cb138a7"/>
+				<text><![CDATA[300eks]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="108b14ea-a38c-489a-9b42-7ec01ccb9166"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a7a15f0b-ed5e-48f0-9605-f8c92994bd9b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="86bbf675-3066-41d9-8ceb-46bc51d46919"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="b1148d1a-317e-4fba-b544-408e54794603"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="2d995df8-2fc5-4719-b5f1-203d8521c0fc"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
